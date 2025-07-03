@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Non-Veg Pickles</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="hero-section">
+    <h1 class="site-title">🥒 Home Made Pickles & Snacks</h1>
+    <p class="tagline">Taste the Best, Straight from Tradition</p>
+</div>
+
+<nav>
+    <a href="{{ url_for('index') }}">🏠 Home</a>
+    <a href="{{ url_for('veg_pickles') }}">🥭 Veg Pickles</a>
+    <a href="{{ url_for('non_veg_pickles') }}">🍗 Non-Veg Pickles</a>
+    <a href="{{ url_for('snacks') }}">🍘 Snacks</a>
+    <a href="{{ url_for('cart') }}">🛒 Cart <img src="{{ url_for('static', filename='images/cart.jpg') }}" alt="Cart" style="width:20px; vertical-align:middle;"></a>
+    <a href="{{ url_for('login') }}">🔑 Login</a>
+    <a href="{{ url_for('signup') }}">📝 Sign Up</a>
+    <a href="{{ url_for('contact') }}">📞 Contact Us</a>
+    <a href="{{ url_for('about') }}">ℹ️ About Us</a>
+</nav>
+
+<h2 style="text-align: center;">Our Best Non-Veg Pickles (₹)</h2>
+
+<div class="gallery">
+    <div class="item">
+        <img src="{{ url_for('static', filename='images/chicken-pickle.jpg') }}" alt="Chicken Pickle">
+        <p>Chicken Pickle – ₹300</p>
+        <form action="{{ url_for('add_to_cart') }}" method="post">
+            <input type="hidden" name="name" value="Chicken Pickle">
+            <input type="hidden" name="price" value="300">
+            <button>Add to Cart</button>
+        </form>
+    </div>
+
+    <div class="item">
+        <img src="{{ url_for('static', filename='images/mutton-pickle.jpg') }}" alt="Mutton Pickle">
+        <p>Mutton Pickle – ₹350</p>
+        <form action="{{ url_for('add_to_cart') }}" method="post">
+            <input type="hidden" name="name" value="Mutton Pickle">
+            <input type="hidden" name="price" value="350">
+            <button>Add to Cart</button>
+        </form>
+    </div>
+
+    <div class="item">
+        <img src="{{ url_for('static', filename='images/fish-pickle.jpg') }}" alt="Fish Pickle">
+        <p>Fish Pickle – ₹320</p>
+        <form action="{{ url_for('add_to_cart') }}" method="post">
+            <input type="hidden" name="name" value="Fish Pickle">
+            <input type="hidden" name="price" value="320">
+            <button>Add to Cart</button>
+        </form>
+    </div>
+
+    <div class="item">
+        <img src="{{ url_for('static', filename='images/prawn-pickle.jpg') }}" alt="Prawn Pickle">
+        <p>Prawn Pickle – ₹340</p>
+        <form action="{{ url_for('add_to_cart') }}" method="post">
+            <input type="hidden" name="name" value="Prawn Pickle">
+            <input type="hidden" name="price" value="340">
+            <button>Add to Cart</button>
+        </form>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2025 Pickle Paradise | For Pickle Lovers</p>
+</footer>
+
+</body>
+</html>

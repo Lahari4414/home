@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Home Made Pickles & Snacks</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body>
+
+<div class="hero-section">
+  <h1 class="site-title">🥒 Home Made Pickles & Snacks</h1>
+  <p class="tagline">Taste the Best, Straight from Tradition</p>
+</div>
+
+<nav>
+    <a href="{{ url_for('index') }}">🏠 Home</a>
+    <a href="{{ url_for('veg_pickles') }}">🥭 Veg Pickles</a>
+    <a href="{{ url_for('non_veg_pickles') }}">🍗 Non-Veg Pickles</a>
+    <a href="{{ url_for('snacks') }}">🍘 Snacks</a>
+    <a href="{{ url_for('cart') }}">🛒 Cart <img src="{{ url_for('static', filename='images/cart.jpg') }}" alt="Cart" style="width:20px; vertical-align:middle;"></a>
+    <a href="{{ url_for('login') }}">🔑 Login</a>
+    <a href="{{ url_for('signup') }}">📝 Sign Up</a>
+    <a href="{{ url_for('contact') }}">📞 Contact Us</a>
+    <a href="{{ url_for('about') }}">ℹ️ About Us</a>
+</nav>
+
+<div class="gallery">
+  <div class="item">
+    <a href="{{ url_for('veg_pickles') }}">
+      <img src="{{ url_for('static',filename='images/mango-pickle.jpg') }}" alt="Veg Pickles">
+      <p>Veg Pickles</p>
+    </a>
+  </div>
+  <div class="item">
+    <a href="{{ url_for('non_veg_pickles') }}">
+      <img src="{{ url_for('static',filename='images/chicken-pickle.jpg') }}" alt="Non-Veg Pickles">
+      <p>Non-Veg Pickles</p>
+    </a>
+  </div>
+  <div class="item">
+    <a href="{{ url_for('snacks') }}">
+      <img src="{{ url_for('static',filename='images/snacks_combo.jpg') }}" alt="Snacks">
+      <p>Snacks</p>
+    </a>
+  </div>
+</div>
+
+<footer><p>&copy; 2025 Pickle Paradise | For Pickle Lovers</p></footer>
+
+</body>
+</html>

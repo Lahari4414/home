@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Snacks</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="hero-section">
+    <h1 class="site-title">🥒 Home Made Pickles & Snacks</h1>
+    <p class="tagline">Taste the Best, Straight from Tradition</p>
+</div>
+
+<nav>
+    <a href="{{ url_for('index') }}">🏠 Home</a>
+    <a href="{{ url_for('veg_pickles') }}">🥭 Veg Pickles</a>
+    <a href="{{ url_for('non_veg_pickles') }}">🍗 Non-Veg Pickles</a>
+    <a href="{{ url_for('snacks') }}">🍘 Snacks</a>
+    <a href="{{ url_for('cart') }}">🛒 Cart <img src="{{ url_for('static', filename='images/cart.jpg') }}" alt="Cart" style="width:20px; vertical-align:middle;"></a>
+    <a href="{{ url_for('login') }}">🔑 Login</a>
+    <a href="{{ url_for('signup') }}">📝 Sign Up</a>
+    <a href="{{ url_for('contact') }}">📞 Contact Us</a>
+    <a href="{{ url_for('about') }}">ℹ️ About Us</a>
+</nav>
+
+<h2 style="text-align: center;">Our Best Snacks (₹)</h2>
+
+<div class="gallery">
+    <div class="item">
+        <img src="{{ url_for('static', filename='images/snacks-combo.jpg') }}" alt="Snack Combo">
+        <p>Snack Combo – ₹200</p>
+        <form action="{{ url_for('add_to_cart') }}" method="post">
+            <input type="hidden" name="name" value="Snack Combo">
+            <input type="hidden" name="price" value="200">
+            <button>Add to Cart</button>
+        </form>
+    </div>
+
+    <div class="item">
+        <img src="{{ url_for('static', filename='images/murukku.jpg') }}" alt="Murukku">
+        <p>Murukku – ₹100</p>
+        <form action="{{ url_for('add_to_cart') }}" method="post">
+            <input type="hidden" name="name" value="Murukku">
+            <input type="hidden" name="price" value="100">
+            <button>Add to Cart</button>
+        </form>
+    </div>
+
+    <div class="item">
+        <img src="{{ url_for('static', filename='images/mixture.jpg') }}" alt="Mixture">
+        <p>Mixture – ₹120</p>
+        <form action="{{ url_for('add_to_cart') }}" method="post">
+            <input type="hidden" name="name" value="Mixture">
+            <input type="hidden" name="price" value="120">
+            <button>Add to Cart</button>
+        </form>
+    </div>
+
+    <div class="item">
+        <img src="{{ url_for('static', filename='images/chakli.jpg') }}" alt="Chakli">
+        <p>Chakli – ₹130</p>
+        <form action="{{ url_for('add_to_cart') }}" method="post">
+            <input type="hidden" name="name" value="Chakli">
+            <input type="hidden" name="price" value="130">
+            <button>Add to Cart</button>
+        </form>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2025 Pickle Paradise | For Pickle Lovers</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Order Success</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header><h1>Order Placed Successfully!</h1></header>
+    <img src="{{ url_for('static', filename='images/success.png') }}" alt="Success" class="success-icon">
+    <p style="text-align:center; font-size:18px;">Thank you for your purchase. We will deliver soon!</p>
+    <div style="text-align:center;"><a href="/"><button>Back to Home</button></a></div>
+</body>
+</html>

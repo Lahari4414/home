@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About Us - Home Made Pickles & Snacks</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="hero-section">
+    <h1 class="site-title">🥒 Home Made Pickles & Snacks</h1>
+    <p class="tagline">Taste the Best, Straight from Tradition</p>
+</div>
+
+<nav>
+    <a href="{{ url_for('index') }}">🏠 Home</a>
+    <a href="{{ url_for('veg_pickles') }}">🥭 Veg Pickles</a>
+    <a href="{{ url_for('non_veg_pickles') }}">🍗 Non-Veg Pickles</a>
+    <a href="{{ url_for('snacks') }}">🍘 Snacks</a>
+    <a href="{{ url_for('cart') }}">🛒 Cart</a>
+    <a href="{{ url_for('login') }}">🔑 Login</a>
+    <a href="{{ url_for('signup') }}">📝 Sign Up</a>
+    <a href="{{ url_for('contact') }}">📞 Contact Us</a>
+    <a href="{{ url_for('about') }}">ℹ️ About Us</a>
+</nav>
+
+<div style="width:60%; margin:50px auto; background:#fff; padding:20px; border-radius:10px; text-align:center;">
+    <h2>About Us</h2>
+    <p>
+        Welcome to Home Made Pickles & Snacks - Taste the Best!<br><br>
+        Our mission is to bring you traditional, authentic homemade pickles and snacks crafted with love and care. Every bite reflects our passion for quality and flavor passed down through generations.
+    </p>
+</div>
+
+</body>
+</html>

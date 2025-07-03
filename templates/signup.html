@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up - Home Made Pickles & Snacks</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="hero-section">
+    <h1 class="site-title">🥒 Home Made Pickles & Snacks</h1>
+    <p class="tagline">Taste the Best, Straight from Tradition</p>
+</div>
+
+<nav>
+    <a href="{{ url_for('index') }}">🏠 Home</a>
+    <a href="{{ url_for('veg_pickles') }}">🥭 Veg Pickles</a>
+    <a href="{{ url_for('non_veg_pickles') }}">🍗 Non-Veg Pickles</a>
+    <a href="{{ url_for('snacks') }}">🍘 Snacks</a>
+    <a href="{{ url_for('cart') }}">🛒 Cart</a>
+    <a href="{{ url_for('login') }}">🔑 Login</a>
+    <a href="{{ url_for('signup') }}">📝 Sign Up</a>
+    <a href="{{ url_for('contact') }}">📞 Contact Us</a>
+    <a href="{{ url_for('about') }}">ℹ️ About Us</a>
+</nav>
+
+<div style="width:300px; margin:50px auto; background:#fff; padding:20px; border-radius:10px;">
+    <h2>Sign Up</h2>
+    <form action="#">
+        <input type="text" placeholder="Username" required><br><br>
+        <input type="email" placeholder="Email" required><br><br>
+        <input type="password" placeholder="Password" required><br><br>
+        <button type="submit">Sign Up</button>
+    </form>
+</div>
+
+</body>
+</html>

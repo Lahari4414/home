@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+    <style>
+        body {
+            background-color: #fff8e1;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        nav {
+            background-color: #ff9800;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .banner {
+            margin-top: 20px;
+        }
+        .section {
+            margin: 20px;
+        }
+        .product {
+            display: inline-block;
+            width: 250px;
+            margin: 20px;
+            padding: 15px;
+            border: 2px solid #ffa726;
+            border-radius: 10px;
+            background-color: #fff3e0;
+        }
+        .product img {
+            width: 100%;
+            height: 150px;
+            border-radius: 8px;
+        }
+        h2 {
+            color: #e65100;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+    <a href="{{ url_for('index') }}">🏠 Home</a>
+    <a href="{{ url_for('veg_pickles') }}">🥭 Veg Pickles</a>
+    <a href="{{ url_for('non_veg_pickles') }}">🍗 Non-Veg Pickles</a>
+    <a href="{{ url_for('snacks') }}">🍘 Snacks</a>
+    <a href="{{ url_for('cart') }}">🛒 Cart <img src="{{ url_for('static', filename='images/cart.jpg') }}" alt="Cart" style="width:20px; vertical-align:middle;"></a>
+    <a href="{{ url_for('login') }}">🔑 Login</a>
+    <a href="{{ url_for('signup') }}">📝 Sign Up</a>
+    <a href="{{ url_for('contact') }}">📞 Contact Us</a>
+    <a href="{{ url_for('about') }}">ℹ️ About Us</a>
+</nav>
+
+    <div class="banner">
+        <img src="{{ url_for('static', filename='images/logo.png') }}" width="120" alt="Logo">
+        <h1>Welcome to Our Homemade Store</h1>
+    </div>
+
+    <div class="section">
+        <div class="product">
+            <img src="{{ url_for('static', filename='images/mango_pickle.jpg') }}" alt="Mango Pickle">
+            <h2>Mango Pickle</h2>
+            <p>Traditional tangy mango pickle.</p>
+            <a href="/veg_pickles.html">View More</a>
+        </div>
+
+        <div class="product">
+            <img src="{{ url_for('static', filename='images/chicken_pickle.jpg') }}" alt="Chicken Pickle">
+            <h2>Chicken Pickle</h2>
+            <p>Spicy homemade chicken pickle.</p>
+            <a href="/non_veg_pickles.html">View More</a>
+        </div>
+
+        <div class="product">
+            <img src="{{ url_for('static', filename='images/snacks.jpg') }}" alt="Snacks">
+            <h2>Snacks</h2>
+            <p>Mixture, murukku & more crunchy bites!</p>
+            <a href="/snacks.html">Explore Snacks</a>
+        </div>
+    </div>
+</body>
+</html>

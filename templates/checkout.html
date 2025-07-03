@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Checkout - Home Made Pickles & Snacks</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="hero-section">
+    <h1 class="site-title">🥒 Home Made Pickles & Snacks</h1>
+    <p class="tagline">Taste the Best, Straight from Tradition</p>
+</div>
+
+<nav>
+    <a href="{{ url_for('index') }}">🏠 Home</a>
+    <a href="{{ url_for('veg_pickles') }}">🥭 Veg Pickles</a>
+    <a href="{{ url_for('non_veg_pickles') }}">🍗 Non-Veg Pickles</a>
+    <a href="{{ url_for('snacks') }}">🍘 Snacks</a>
+    <a href="{{ url_for('cart') }}">🛒 Cart</a>
+    <a href="{{ url_for('login') }}">🔑 Login</a>
+    <a href="{{ url_for('signup') }}">📝 Sign Up</a>
+    <a href="{{ url_for('contact') }}">📞 Contact Us</a>
+    <a href="{{ url_for('about') }}">ℹ️ About Us</a>
+</nav>
+
+<div style="text-align: center; padding: 40px;">
+    <h2>Checkout</h2>
+    <p>Please confirm your order and provide your details below:</p>
+
+    <form action="{{ url_for('success') }}" method="post" style="display: inline-block; text-align: left;">
+        <label for="name">Name:</label><br>
+        <input type="text" name="name" required><br><br>
+
+        <label for="address">Address:</label><br>
+        <textarea name="address" rows="3" required></textarea><br><br>
+
+        <label for="phone">Phone Number:</label><br>
+        <input type="text" name="phone" required><br><br>
+
+        <button type="submit">Place Order</button>
+    </form>
+</div>
+
+<footer>
+    <p>&copy; 2025 Pickle Paradise | For Pickle Lovers</p>
+</footer>
+
+</body>
+</html>
