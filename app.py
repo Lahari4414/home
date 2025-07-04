@@ -12,12 +12,13 @@ app.secret_key = os.urandom(24)
 # AWS Configuration
 dynamodb = boto3.resource('dynamodb', region_name='us-east-1')
 user_table = dynamodb.Table('Users')
-orders_table = dynamodb.Table('Orders')
+orders_table = dynamodb.Table('PickleOrders')
 
 # Email Configuration
 EMAIL_ADDRESS = 'laharikessamsetty@gmail.com'
 EMAIL_PASSWORD = 'iyxh zneg oyog tyui'  # Replace with your actual Gmail App Password
 
+# Product Data - Unchanged
 veg_items = [
     {"name": "Mango Pickle", "price": 150, "img": "mango-pickle.jpg"},
     {"name": "Lemon Pickle", "price": 120, "img": "lemon-pickle.jpg"},
@@ -56,8 +57,8 @@ def non_veg_pickles():
 def snacks():
     return render_template('snacks.html', items=snack_items)
 
-@app.route('/add_to_cart', methods=['POST'])
-def add_to_cart():
+@app.route('/add_to_cart_route', methods=['POST'])
+def add_to_cart_route():
     item = request.form.to_dict()
     cart = session.get('cart', [])
     cart.append(item)
@@ -169,5 +170,5 @@ def send_email(to_email, subject, body):
     except Exception as e:
         print(f"Failed to send email: {e}")
 
-if __name__ == '__main__':
+if __name__== '__main__':
  app.run(debug=True, host='0.0.0.0', port=5000)
